@@ -3,3 +3,7 @@ body {
     color:rgb(58, 46, 135);
 }
 
+.red{
+    background-color: red;
+    font-weight: bolder;
+}

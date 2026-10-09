@@ -3,13 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        <%= title %>
+    <title>Articles
     </title>
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <h1><%= title %></h1>
-    Hello EJS!
+<table>
+    <thead>
+        <tr>
+            <th>Név</th>
+            <th>Kategória</th>
+            <th>Ár</th>
+            <th>Készlet</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+       <% products.forEach(element => { %>
+        <tr class="<%= element.stock < 1? 'red' : '' %>">
+            <td><%= element.name %></td>
+            <td><%= element.category %></td>
+            <td><%= element.price %></td>
+            <td class="<%= element.stock < 5 ? 'red' : '' %>">
+                <%= element.stock %>
+
+        </tr>
+       <% }) %> 
+    </tbody>
+
+</table>
 </body>
 </html>
