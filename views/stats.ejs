@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Stats</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <h1>Statisztikák</h1>
+
+    <ul>
+        <li>Termékek száma: <strong><%= count %></strong></li>
+        <li>Átlagár: <strong><%= avg.toFixed(0) %></strong> Ft</li>
+    </ul>
+    <h2>Legdrágább</h2>
+    <p><%= exp.name %> — <%= exp.price %> Ft</p>
+
+    <h2>Legolcsóbb</h2>
+    <p><%= cheap.name %> — <%= cheap.price %> Ft</p>
+
+    <br />
+    <hr />
+    <br />
+    <a href="/">Back to index</a>
+</body>
+</html>
